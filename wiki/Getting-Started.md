@@ -32,7 +32,7 @@ Sanity-check the pieces are there: `host_orchestrator.py` (the scheduler),
 make test
 ```
 
-This runs `python3 -m unittest discover -s tests -v` (28 tests covering the
+This runs `python3 -m unittest discover -s tests -v` (30 tests covering the
 harness, the router, and the retry/lock behavior) and `go vet ./... && go
 test ./...` (3 tests covering the TUI's socket handling). Both suites use
 their own `mock`/`fake` providers — no network, no API keys, no Ollama

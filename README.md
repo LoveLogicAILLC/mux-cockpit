@@ -1,7 +1,7 @@
 # MUX Cockpit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests: 31 passing](https://img.shields.io/badge/tests-31%20passing-brightgreen.svg)](tests/)
+[![Tests: 33 passing](https://img.shields.io/badge/tests-33%20passing-brightgreen.svg)](tests/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Go 1.22+](https://img.shields.io/badge/go-1.22%2B-00ADD8.svg)](https://go.dev/)
 [![Node 14+](https://img.shields.io/badge/node-14%2B-339933.svg)](https://nodejs.org/)
@@ -55,7 +55,7 @@ MUX_PROVIDER=ollama MUX_MODEL="llama3.1:8b-instruct-q5_K_M" bash run.sh
 # 4. Offline mock — no model, no network, no API key
 MUX_PROVIDER=mock bash run.sh
 
-make test    # 28 Python + 3 Go tests
+make test    # 30 Python + 3 Go tests
 ```
 
 `MUX_PROVIDER=auto` (used by `make demo`-style flows) tries Ollama first if
