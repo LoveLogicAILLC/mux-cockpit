@@ -4,7 +4,7 @@ LDFLAGS := -s -w -X main.version=$(VERSION)
 PREFIX  ?= $(HOME)/.local
 SOCK    ?= /tmp/mux_host.sock
 
-.PHONY: all build build-m4 test test-py test-go run host rpc demo status fmt clean install
+.PHONY: all build build-m4 test test-py test-go run host rpc demo status fmt clean install npm-build npm-publish
 
 all: build
 
@@ -41,7 +41,13 @@ fmt:
 	gofmt -w *.go
 
 clean:
-	rm -rf bin/ memory/ $(SOCK) __pycache__ */__pycache__
+	rm -rf bin/ memory/ dist/ $(SOCK) __pycache__ */__pycache__
+
+npm-build:
+	@bash scripts/build-npm.sh
+
+npm-publish:
+	@bash scripts/publish-npm.sh
 
 install: build
 	install -d $(PREFIX)/bin && install bin/cockpit $(PREFIX)/bin/mux-cockpit
