@@ -4,6 +4,18 @@ Fastest path from a fresh clone to a swarm you can watch move. This assumes
 nothing beyond what's in the repo — see the root [`README.md`](../README.md)
 for the full pitch and architecture diagram if you want more context first.
 
+## Quickest: Install via Homebrew
+
+If you are on macOS or Linux with Homebrew installed, you can skip cloning and building entirely:
+
+```bash
+brew install LoveLogicAILLC/tap/mux-cockpit
+```
+
+This installs the complete stack (`mux-cockpit`, `mux-host`, and `mux-stack`) into your system `$PATH`.
+
+---
+
 ## 1. Prerequisites
 
 - **Python 3.10+** (stdlib-only, no `pip install` needed for the host)

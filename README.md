@@ -62,6 +62,28 @@ make test    # 30 Python + 3 Go tests
 it's installed and reachable, otherwise falls back to Gemini/OpenAI-compatible
 (if configured) or the mock provider.
 
+### Homebrew (Recommended on macOS & Linux)
+
+Install the complete stack — the compiled Go TUI, the Python swarm orchestrator, and the all-in-one launcher — in a single command via the official LoveLogicAI tap:
+
+```bash
+brew install LoveLogicAILLC/tap/mux-cockpit
+```
+
+This installs three binaries into your `$PATH`:
+- `mux-cockpit` — The Charm/Bubble Tea terminal dashboard
+- `mux-host` — The Python host orchestrator and priority router
+- `mux-stack` — All-in-one stack launcher
+
+```bash
+# 1. Start the host orchestrator (or export GEMINI_API_KEY / MUX_PROVIDER=ollama)
+export OPENAI_API_KEY="sk-..."
+mux-host serve &
+
+# 2. Open the interactive cockpit dashboard
+mux-cockpit
+```
+
 ### npm install (TUI only)
 
 The `mux-cockpit` npm package ships **only the compiled Go dashboard binary**,
